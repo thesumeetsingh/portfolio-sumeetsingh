@@ -4,13 +4,8 @@ export const certificates = [
     issuer: "Google Cloud",
     year: "2025",
     logo: "/certificates/google-cloud.png",
-    link: "",
-  },
-  {
-    title: "DSA with JAVA",
-    issuer: "Apna College",
-    year: "2025",
-    logo: "/certificates/apna-college.png",
+    category: "Cloud & Data",
+    featured: true,
     link: "",
   },
   {
@@ -18,6 +13,17 @@ export const certificates = [
     issuer: "Apna College",
     year: "2025",
     logo: "/certificates/apna-college.png",
+    category: "Development",
+    featured: false,
+    link: "",
+  },
+  {
+    title: "DSA with JAVA",
+    issuer: "Apna College",
+    year: "2025",
+    logo: "/certificates/apna-college.png",
+    category: "Programming",
+    featured: false,
     link: "",
   },
   {
@@ -25,6 +31,8 @@ export const certificates = [
     issuer: "Cisco Networking Academy",
     year: "2025",
     logo: "/certificates/cisco.png",
+    category: "Cybersecurity",
+    featured: false,
     link: "",
   },
   {
@@ -32,6 +40,8 @@ export const certificates = [
     issuer: "Cisco Networking Academy",
     year: "2025",
     logo: "/certificates/cisco.png",
+    category: "Networking",
+    featured: false,
     link: "",
   },
   {
@@ -39,6 +49,8 @@ export const certificates = [
     issuer: "AICTE",
     year: "2024",
     logo: "/certificates/aicte.png",
+    category: "Innovation",
+    featured: false,
     link: "",
   },
 ];

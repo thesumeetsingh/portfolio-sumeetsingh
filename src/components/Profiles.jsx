@@ -28,13 +28,13 @@ const profiles = [
   {
     name: "CodeChef",
     description: "Competitive programming",
-    url: "",
+    url: "https://www.codechef.com/users/thesumeetsingh",
     icon: <SiCodechef />,
   },
   {
     name: "Google Cloud",
     description: "Cloud skills & badges",
-    url: "",
+    url: "https://www.skills.google/public_profiles/1d797603-2e65-4ef8-a68f-d40cf48ce42c",
     icon: <SiGooglecloud />,
   },
 ];
@@ -59,38 +59,40 @@ function Profiles() {
             </h2>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-3">
             {profiles.map((profile, index) => (
               <motion.a
                 key={profile.name}
                 href={profile.url || "#"}
                 target={profile.url ? "_blank" : undefined}
                 rel={profile.url ? "noreferrer" : undefined}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{
                   duration: 0.4,
-                  delay: index * 0.07,
+                  delay: index * 0.06,
                 }}
-                whileHover={{ y: -5 }}
-                className="group rounded-2xl border border-white/10 bg-white/[0.02] p-5 transition-colors hover:border-white/20"
+                whileHover={{ x: 5 }}
+                className="group flex items-center gap-5 rounded-2xl border border-white/10 bg-white/[0.02] p-4 transition-colors hover:border-white/20 hover:bg-white/[0.04] sm:p-5"
               >
-                <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-lg text-white/60 transition group-hover:text-white">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-lg text-white/50 transition group-hover:border-violet-400/30 group-hover:text-violet-300">
                   {profile.icon}
                 </div>
 
-                <h3 className="text-sm font-medium">
-                  {profile.name}
-                </h3>
+                <div className="min-w-0 flex-1">
+                  <h3 className="text-sm font-medium">
+                    {profile.name}
+                  </h3>
 
-                <p className="mt-1 text-xs leading-5 text-white/30">
-                  {profile.description}
-                </p>
-
-                <div className="mt-5 text-xs text-white/20 transition group-hover:text-violet-300">
-                  Visit profile ↗
+                  <p className="mt-1 text-xs text-white/30">
+                    {profile.description}
+                  </p>
                 </div>
+
+                <span className="text-sm text-white/20 transition group-hover:translate-x-1 group-hover:text-violet-300">
+                  ↗
+                </span>
               </motion.a>
             ))}
           </div>

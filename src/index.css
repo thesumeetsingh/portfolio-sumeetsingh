@@ -26,6 +26,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
   background: #050505;
 }
 
@@ -63,4 +64,14 @@ button {
 img {
   display: block;
   max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  html {
+    scroll-padding-top: 85px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
 }
